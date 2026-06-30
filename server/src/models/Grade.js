@@ -6,6 +6,8 @@ const gradeSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
+      trim: true,
+      uppercase: true,
     },
   },
   { timestamps: true },
