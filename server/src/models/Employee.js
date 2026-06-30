@@ -6,6 +6,7 @@ const employeeSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
+      trim: true,
     },
     passwordHash: {
       type: String,
@@ -14,15 +15,20 @@ const employeeSchema = new mongoose.Schema(
     name: {
       type: String,
       required: true,
+      trim: true,
     },
     grade: {
       type: String,
       required: true,
+      trim: true,
+      uppercase: true,
     },
     email: {
       type: String,
       required: true,
       unique: true,
+      trim: true,
+      lowercase: true,
     },
     emailVerified: {
       type: Boolean,
